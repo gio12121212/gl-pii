@@ -194,7 +194,7 @@ footer p {
 #propósito {
     font: 25px Montserrat;
     margin: 0 30px 10px;
-=======
+
 /*TODA LA PÁGINA*/
 body {
     margin: 0;
@@ -392,21 +392,7 @@ footer p {
     margin: 0 30px 10px;
 }
 
-/*.divisiones {
-    width: 300px;
-    height: auto;
-    margin: 25px auto;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    /*ESTILO*/
-/*    background-color: #58a778;
-    border-radius: 15px;
-    transition: box-shadow 0.3s;
-}
-.divisiones:hover {
-    box-shadow: 0 0 50px;
-} */
+
 
 .divisiones{
     display: flex;
@@ -423,11 +409,15 @@ footer p {
 
 }
 
+.divisiones:hover {
+    box-shadow: 0 0 50px;
+}
+
+
 .divisiones img {
  width: 100%;
  min-width: 0;
  max-width: 80px;
  height: auto;
  object-fit: contain; 
->>>>>>> c6c1220 (v1)
 }
