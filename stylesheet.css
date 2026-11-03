@@ -105,9 +105,25 @@ footer p {
 /*HOME*/
     /* jasdjaj amejora*/
 .fondo{
-    background-image: url(imagenes/malvinas.jpg);
+    height: 100vh;
     background-size: cover;
-    padding: 1px;
+    background-position: center;
+    animation: cambiarFondo 15s infinite;
+}
+
+@keyframes cambiarFondo{
+    0%, 30%{
+        background-image: url(imagenes/fgambarte.jpg);
+    }
+    33%, 63%{
+        background-image: url();
+    }
+    66%, 97%{
+        background-image: url();
+    }
+    100%{
+        background-image: url();
+    }
 }
 
 .fixture{
