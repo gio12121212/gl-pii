@@ -1,3 +1,11 @@
+/*
+mira la linea 456
+
+*/
+
+
+
+
 /*TODA LA PÁGINA*/
 body {
     margin: 0;
@@ -442,5 +450,14 @@ footer p {
     justify-content: flex-end;
     align-items: center;
     margin: 0 100px 0 auto;
+    padding: 10px;
+}
+
+/*soluciona esto quiero q qude abajo xxddxd */
+.desc{
+    display: flex;
+    justify-content: flex-end;
+    align-items: self-end;
+    margin: 300px 0 100px ;
     padding: 10px;
 }
