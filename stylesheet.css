@@ -103,6 +103,14 @@ footer p {
 }
 
 /*HOME*/
+
+.fondo{
+    background-image: url(imagenes/malvinas.jpg);
+    background-repeat: no-repeat;
+    background-size: 1836px 1263px;
+    background-position: left;
+}
+
 .fixture{
     display: flex;
     width: 600px;
@@ -116,7 +124,7 @@ footer p {
 }
 
 .fixture:hover{
-    box-shadow: 0 0 10px;
+    box-shadow: 0 0 25px;
 }
 
 .fixture-titulo {
