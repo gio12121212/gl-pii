@@ -107,12 +107,8 @@ footer p {
 #index-body {
     background-image: url(imagenes/malvinas.jpg);
     background-repeat: no-repeat;
-}
-
-.fondo{
-    background-repeat: no-repeat;
-    background-size: 1836px 1263px;
-    background-position: left;
+    background-size: cover;
+    max-width: 100%;
 }
 
 .fixture{
