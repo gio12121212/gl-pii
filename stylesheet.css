@@ -105,12 +105,18 @@ footer p {
 /*HOME*/
 .fixture{
     display: flex;
-    height: 300px;
     width: 600px;
+    height: 350px;
     background-color: #207744;
     justify-content: flex-start;
     align-items: center;
     margin: 50px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.fixture:hover{
+    box-shadow: 0 0 10px;
 }
 
 .fixture-titulo {
