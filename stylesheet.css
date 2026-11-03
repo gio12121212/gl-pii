@@ -103,13 +103,8 @@ footer p {
 }
 
 /*HOME*/
-<<<<<<< HEAD
-
-.fondo {
-=======
-/* jasdjaj amejora*/
+    /* jasdjaj amejora*/
 .fondo{
->>>>>>> 27b9e7a (respaldo)
     background-image: url(imagenes/malvinas.jpg);
     background-size: cover;
     padding: 1px;
