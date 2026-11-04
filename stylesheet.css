@@ -105,18 +105,22 @@ footer p {
 /*HOME*/
     /* jasdjaj amejora*/
 .fondo{
+    background-image: url(imagenes/malvinasarg.WebP);
+    width: 100%;
     height: 100vh;
     background-size: cover;
     background-position: center;
-    animation: cambiarFondo 15s infinite;
+    background-repeat: no-repeats;
+
+    /*nimation: cambiarFondo 15s infinite;*/
 }
 
-@keyframes cambiarFondo{
+/*@keyframes cambiarFondo{
     0%, 30%{
         background-image: url(imagenes/fgambarte.jpg);
     }
     33%, 63%{
-        background-image: url();
+        background-image: url(imagenes/Leprac1.jpg);
     }
     66%, 97%{
         background-image: url();
@@ -124,7 +128,7 @@ footer p {
     100%{
         background-image: url();
     }
-}
+}*/
 
 .fixture{
     display: flex;
