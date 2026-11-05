@@ -234,32 +234,29 @@ footer p {
 }
 
 /*TEAMS*/
+
 .divisiones {
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr;
+    margin: 10px auto;
     display: flex;
-    margin: auto;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 150px;
-    gap: 8px;
+    gap: 0 50px;
+    width: 950px;
+}
+
+.divisiones img {
+    width: 130px;
     background-color: #58a778;
+    vertical-align: middle;
+    padding: 10px;
     border-radius: 15px;
-    border-color: #042b17;
-    transition: box-shadow 0.3s;
+    margin: 10px 0;
+    transition: 0.2s;
 }
 
-.divisiones img{
-    width: 100%;
-    min-width: 0;
-    max-width: 80px;
-    height: auto;
-    object-fit: contain; 
-}
-
-.divisiones:hover {
-    box-shadow: 0 0 50px;
+.divisiones img:hover {
+    box-shadow: 0 0 25px #042b17b6;
 }
 
 /*ABOUT US*/
