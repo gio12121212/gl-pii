@@ -1,0 +1,23 @@
+[
+    {
+        "id": "csir",
+        "nombre": "Independiente Rivadavia",
+        "escudo": "/imagenes/csir.webp",
+        "fundacion": 1913,
+        "historia": "<p>sapos del parque</p>"
+    },
+    {
+        "id": "gimnasia",
+        "nombre": "Gimnasia y Esgrima de Mendoza",
+        "escudo": "/imagenes/gimnasia.png",
+        "fundacion": 1908,
+        "historia": "<p>micropartícula</p>"
+    },
+    {
+        "id": "godoy cruz",
+        "nombre": "Godoy Cruz",
+        "escudo": "/imagenes/godoy cruz.png",
+        "fundacion": 1921,
+        "historia": "<p>muerto en la B</p>"
+    }
+]

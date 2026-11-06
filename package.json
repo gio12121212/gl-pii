@@ -1,0 +1,25 @@
+{
+  "name": "gl-pii",
+  "version": "1.0.0",
+  "description": "Sitio web de información de fútbol mendocino",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gio12121212/gl-pii.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/gio12121212/gl-pii/issues"
+  },
+  "homepage": "https://github.com/gio12121212/gl-pii#readme",
+  "dependencies": {
+    "astro": "^7.4.7"
+  }
+}

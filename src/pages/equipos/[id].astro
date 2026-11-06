@@ -1,0 +1,27 @@
+---
+import equipos from '../../data/equipos.json';
+
+export function getStaticPaths() {
+    return equipos.map((equipo) => ({
+    params: { id: equipo.id },
+    props: { equipo },
+    }));
+}
+
+const { equipo } = Astro.props;
+---
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>{equipo.nombre} - Historia</title>
+        <meta name="description" content={`Historia de ${equipo.nombre}`} />
+        <link rel="stylesheet" href="/css/estilos.css" />
+    </head>
+        <body>
+        <h1>{equipo.nombre}</h1>
+        <img src={equipo.escudo} alt={`Escudo de ${equipo.nombre}`} />
+        <p>Fundación: {equipo.fundacion}</p>
+        <div set:html={equipo.historia} />
+        <a href="/equipos/">← Volver a equipos</a>
+    </body>
+</html>
