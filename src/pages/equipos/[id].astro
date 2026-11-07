@@ -15,13 +15,25 @@ const { equipo } = Astro.props;
         <meta charset="utf-8" />
         <title>{equipo.nombre} - Historia</title>
         <meta name="description" content={`Historia de ${equipo.nombre}`} />
-        <link rel="stylesheet" href="/css/estilos.css" />
+        <link rel="stylesheet" href="/stylesheet.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
         <body>
-        <h1>{equipo.nombre}</h1>
-        <img src={equipo.escudo} alt={`Escudo de ${equipo.nombre}`} />
-        <p>Fundación: {equipo.fundacion}</p>
-        <div set:html={equipo.historia} />
-        <a href="/equipos/">← Volver a equipos</a>
-    </body>
+            <div id="fondo-hinchada" style={`background-image: url('${equipo.hinchadaFondo}'); background-size: cover;`}>
+                <!--CUERPO DE PÁGINA-->
+                <div id="datos-equipo">
+                    <img id="escudo" src={equipo.escudo} alt={`Escudo de ${equipo.nombre}`} width="200px">
+                    <h1>{equipo.nombre}</h1>
+                    <h3>Fundado el {equipo.fundacion}</h3>
+                    <h3>Actualmente disputa la {equipo.division}</h3>
+                    <div id="clasico">
+                        <p>Es clásico de {equipo.clasico}</p>
+                        <img src={equipo.escudoClasico} alt={`Escudo de ${equipo.nombre}`} width="30px">
+                    </div>
+                </div>
+            </div>
+            <div set:html={equipo.historia}></div>
+            <a href="/equipos/"><h2>← Volver a equipos</h2></a>
+            
+        </body>
 </html>

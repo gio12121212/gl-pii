@@ -1,5 +1,8 @@
 ---
 import equipos from '../../data/equipos.json';
+
+const ligaProfesional = equipos.filter((e) => e.division === 'Liga Profesional Argentina');
+const primeraNacional = equipos.filter((e) => e.division === 'Primera Nacional');
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -26,14 +29,15 @@ import equipos from '../../data/equipos.json';
     <h1>EQUIPOS MENDOCINOS</h1>
     <h2>LIGA PROFESIONAL ARGENTINA</h2>
     <div class="divisiones">
-        {equipos.map((equipo) => (
-            <a href={`/equipos/${equipo.id}/`} target="_blank"><img src={equipo.escudo} alt={`Escudo de ${equipo.nombre}`}></a>
+        {ligaProfesional.map((equipo) => (
+            <a href={`/equipos/${equipo.id}/`}><img src={equipo.escudo} alt={`Escudo de ${equipo.nombre}`}></a>
         ))}
     </div>
     <h2>PRIMERA NACIONAL</h2>
     <div class="divisiones">
-        <img src="/imagenes/godoy cruz.png" alt="club deportivo godoy cruz antonio tomba">
-        <img src="/imagenes/maipu.svg" alt="deportivo maipu">
+        {primeraNacional.map((equipo) => (
+            <a href={`/equipos/${equipo.id}/`}><img src={equipo.escudo} alt={`Escudo de ${equipo.nombre}`}></a>
+        ))}
     </div>
     <h2>FEDERAL A</h2>
     <div class="divisiones">

@@ -259,6 +259,43 @@ footer p {
     box-shadow: 0 0 25px #042b17b6;
 }
 
+/*SPECIFIC TEAM*/
+#datos-equipo {
+    background-color: #58a778;
+    width: 800px;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+#escudo {
+    background-color: #207744;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#datos-equipo h1, #datos-equipo h3{
+    background-color: #207744;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#clasico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #207744;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#clasico img {
+    margin-left: 10px;
+}
+
 /*ABOUT US*/
 #info_personal {
     display: inline-grid;

@@ -3,21 +3,44 @@
         "id": "csir",
         "nombre": "Independiente Rivadavia",
         "escudo": "/imagenes/csir.webp",
-        "fundacion": 1913,
+        "division": "Liga Profesional Argentina",
+        "fundacion":"24 de enero de 1913",
+        "hinchadaFondo": "/imagenes/hinchada csir.jpg",
+        "clasico": "Gimnasia y Esgrima de Mendoza",
+        "escudoClasico": "/imagenes/gimnasia.png",
         "historia": "<p>sapos del parque</p>"
     },
     {
         "id": "gimnasia",
         "nombre": "Gimnasia y Esgrima de Mendoza",
         "escudo": "/imagenes/gimnasia.png",
-        "fundacion": 1908,
+        "division": "Liga Profesional Argentina",
+        "fundacion": "30 de octubre de 1908",
+        "hinchadaFondo": "/imagenes/hinchada gimnasia.jpg",
+        "clasico": "Independiente Rivadavia",
+        "escudoClasico": "/imagenes/csir.webp",
         "historia": "<p>micropartícula</p>"
     },
     {
         "id": "godoy cruz",
         "nombre": "Godoy Cruz",
         "escudo": "/imagenes/godoy cruz.png",
-        "fundacion": 1921,
+        "division": "Primera Nacional",
+        "fundacion": "1 de junio de 1921",
+        "hinchadaFondo": "/imagenes/hinchada godoy cruz.webp",
+        "clasico": "Andes Talleres",
+        "escudoClasico": "/imagenes/andes talleres.svg",
         "historia": "<p>muerto en la B</p>"
+    },
+    {
+        "id": "maipú",
+        "nombre": "Deportivo Maipú",
+        "escudo": "/imagenes/maipu.svg",
+        "division": "Primera Nacional",
+        "fundacion": "16 de diciembre de 1927",
+        "hinchadaFondo": "/imagenes/hinchada maipu.jpg",
+        "clasico": "Gutierrez",
+        "escudoClasico": "/imagenes/gutierrez.svg",
+        "historia": "<p>BOTEHIELO</p>" 
     }
 ]
