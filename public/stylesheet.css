@@ -317,10 +317,11 @@ footer p {
 
 /* slider copas */
 
-.slider-container {
+.slider {
   position: relative;
-  max-width: 800px;
-  margin: 0 auto;
+  width: calc(100% - 32px);
+  max-width: 720px;
+  margin: 0 auto 48px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -335,24 +336,33 @@ footer p {
 .slide {
   min-width: 100%;
   box-sizing: border-box;
+  height: 340px;
+  padding: 24px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide img {
-  width: 100%;
+  width: 280px;
+  max-width: 100%;
+  height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
-.btn {
+.slider button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(5px);
   border: none;
-  color: #333;
+  color: #163c2d;
   font-size: 24px;
-  padding: 12px 16px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   cursor: pointer;
   border-radius: 50%;
   transition: background 0.3s, scale 0.2s;
@@ -360,12 +370,12 @@ footer p {
   z-index: 10;
 }
 
-.btn:hover {
+.slider button:hover {
   background: rgba(255, 255, 255, 0.8);
   scale: 1.1;
 }
 
-.btn:active {
+.slider button:active {
   scale: 0.95;
 }
 
@@ -375,4 +385,24 @@ footer p {
 
 .btn-next {
   right: 15px;
+}
+
+.slider button:focus-visible {
+  outline: 3px solid #163c2d;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .slide {
+    height: 260px;
+    padding: 20px 56px;
+  }
+
+  .btn-prev {
+    left: 8px;
+  }
+
+  .btn-next {
+    right: 8px;
+  }
 }
