@@ -106,11 +106,10 @@ footer p {
     /* jasdjaj amejora*/
 .fondo{
     background-image: url(imagenes/malvinasarg.WebP);
-    width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
-    padding: 1px;
+    padding: 1px 0 48px;
     /*nimation: cambiarFondo 15s infinite;*/
 }
 
@@ -129,36 +128,142 @@ footer p {
     }
 }*/
 
-.fixture{
+.homecss {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    grid-template-areas: "fixture presentacion" "noticias presentacion";
+    gap: 24px 60px;
+    width: calc(100% - 100px);
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Montserrat, sans-serif;
+}
+
+.homecss .fixture,
+.homecss .news {
+    box-sizing: border-box;
+    padding: 28px;
+    border-radius: 24px;
+    background: rgba(224, 241, 230, 0.95);
+    box-shadow: 0 8px 24px #042b1733;
+}
+
+.homecss .fixture {
+    grid-area: fixture;
+    min-height: 300px;
     display: flex;
-    width: 600px;
-    height: 350px;
-    background-color: #207744;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 50px;
-    border-radius: 30px;
-    transition: 0.3s;
 }
 
-.fixture:hover{
-    box-shadow: 0 0 25px;
+.homecss h2 {
+    margin: 0 0 16px;
+    font-size: clamp(24px, 3vw, 32px);
 }
 
-.titulo{
+.homecss p {
+    margin: 0 0 20px;
+    line-height: 1.7;
+}
+
+.home-presentacion {
+    grid-area: presentacion;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 24px;
+    padding: 30px 0;
+}
+
+.homecss .titulo {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 18px 24px;
+    border-radius: 20px;
+    background: #58a778;
+    font-size: clamp(42px, 5vw, 68px);
+}
+
+.homecss .desc {
+    box-sizing: border-box;
+    width: 85%;
+    margin: 0;
+    padding: 30px;
+    border-radius: 24px;
+    background: rgba(224, 241, 230, 0.95);
+    font-size: 20px;
+    text-align: left;
+}
+
+.homecss .news {
+    grid-area: noticias;
+    width: 85%;
+    justify-self: center;
+}
+
+.home-link {
+    color: #163c2d;
+    font-weight: 700;
+    text-underline-offset: 4px;
+}
+
+#index-body nav ul {
+    flex-wrap: wrap;
     align-items: center;
-    margin: 0 100px 0 auto;
-    padding: 10px;
+    justify-content: space-between;
+    gap: 8px;
 }
 
-/*soluciona esto quiero q qude abajo xxddxd */
-.desc{
-    display: flex;
-    justify-content: flex-end;
-    align-items: self-end;
-    margin: 300px 0 100px ;
-    padding: 10px;
+#index-body nav .links {
+    font-size: clamp(12px, 1.2vw, 18px);
+    padding: 16px 8px;
+}
+
+@media (max-width: 760px) {
+    #index-body nav {
+        margin: 16px 16px 28px;
+        padding: 16px;
+    }
+
+    #index-body nav ul {
+        justify-content: center;
+    }
+
+    .homecss {
+        width: calc(100% - 32px);
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "presentacion" "fixture" "noticias";
+        gap: 24px;
+    }
+
+    .home-presentacion {
+        padding: 0;
+        gap: 16px;
+    }
+
+    .homecss .desc,
+    .homecss .news {
+        width: 100%;
+    }
+
+    .homecss .fixture {
+        min-height: 240px;
+    }
+
+    #index-body footer img {
+        max-width: 100%;
+    }
+
+    #index-body #info_empresa {
+        gap: 0 12px;
+    }
+
+    #index-body #info_empresa p {
+        overflow-wrap: anywhere;
+    }
 }
 
 /*NEXT MATCHES*/

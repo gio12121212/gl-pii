@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Incio - Afume</title>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio - Afume</title>
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css">
     <!--hay q ponerle logo a la pagina-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
@@ -22,18 +23,22 @@
         </nav>
         
         <!--CUERPO DE PÁGINA-->
-        <div class="homecss">
-            <div class="fixture">
-                <h1 class="fixture-datos">ajfahfajfaoo</h1>
-            </div>
-            <div class="fixture">
-                <h1 class="titulo">AFUME</h1>
-                <p class="desc">esta pagina es mendosiria</p>
-            </div>
-            <div class="news">
-                <h1>ssss</h1>
-            </div>
-        </div>
+        <main class="homecss">
+            <section class="fixture" aria-labelledby="fixture-title">
+                <h2 id="fixture-title" class="fixture-datos">Fixture resumido</h2>
+                <p>Consultá los próximos encuentros del fútbol mendocino.</p>
+                <a class="home-link" href="/next_matches">Ver próximos partidos →</a>
+            </section>
+            <section class="home-presentacion" aria-labelledby="home-title">
+                <h1 id="home-title" class="titulo">AFUME</h1>
+                <p class="desc">El fútbol de Mendoza en un solo lugar. Noticias, equipos, competencias y próximos partidos para seguir a nuestros clubes.</p>
+            </section>
+            <section class="news" aria-labelledby="home-news-title">
+                <h2 id="home-news-title">Noticias</h2>
+                <p>Próximamente, las novedades del fútbol mendocino.</p>
+                <a class="home-link" href="/news">Ver noticias →</a>
+            </section>
+        </main>
     </div>
     <!--FOOTER-->
     <footer>
