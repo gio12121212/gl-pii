@@ -536,3 +536,14 @@ footer p {
     right: 8px;
   }
 }
+
+
+/* aca empieza el css de las competencias */
+.copa {
+    display: block;
+    width: 300px;
+    height: 100%;
+    margin: auto;
+    max-width: 300px;
+    padding: 35px;
+}   
