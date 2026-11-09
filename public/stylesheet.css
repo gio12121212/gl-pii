@@ -309,6 +309,31 @@ footer p {
     width: 40px;
 }
 
+/* La misma tabla, ajustada al espacio del fixture del inicio. */
+.homecss .next_matches {
+    width: 100%;
+    table-layout: fixed;
+    margin: 0 0 24px;
+    font-size: 13px;
+}
+
+.homecss .next_matches th {
+    padding: 12px;
+    height: auto;
+    font-size: 14px;
+}
+
+.homecss .next_matches td {
+    padding: 12px 4px;
+    overflow-wrap: anywhere;
+}
+
+.homecss .next_matches td img {
+    display: block;
+    width: 32px;
+    margin: 8px auto;
+}
+
 .td_hour {
     width: 15%;
     border-right: 2px solid black;
