@@ -1,9 +1,12 @@
+---
+import { withBase } from '../utils/paths';
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href={withBase("stylesheet.css")} type="text/css">
     <!--hay q ponerle logo a la pagina-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>libertadores</title>
@@ -11,24 +14,24 @@
 <body>
     <nav>
         <ul>
-            <li><a href="/"><img src="/imagenes/afume logo.svg" alt="logo de afume" width="200px"></a></li>
-            <li><a class="links" href="/news">NOTICIAS</a></li>
-            <li><a class="links" href="/next_matches">PRÓXIMOS PARTIDOS</a></li>
-            <li><a class="links" href="/equipos/">EQUIPOS</a></li>
-            <li><a class="links" href="/competencies">COMPETENCIAS</a></li>
-            <li><a class="links" href="/about_us">SOBRE NOSOTROS</a></li>
+            <li><a href={withBase("")}><img src={withBase("imagenes/afume logo.svg")} alt="logo de afume" width="200px"></a></li>
+            <li><a class="links" href={withBase("news/")}>NOTICIAS</a></li>
+            <li><a class="links" href={withBase("next_matches/")}>PRÓXIMOS PARTIDOS</a></li>
+            <li><a class="links" href={withBase("equipos/")}>EQUIPOS</a></li>
+            <li><a class="links" href={withBase("competencies/")}>COMPETENCIAS</a></li>
+            <li><a class="links" href={withBase("about_us/")}>SOBRE NOSOTROS</a></li>
         </ul>
     </nav>
-    <a href="/competencies" class='volver' aria-label='volver a competencias'>
+    <a href={withBase("competencies/")} class='volver' aria-label='volver a competencias'>
         &#10094;
     </a>
     <h1>Copa Libertadores</h1>
-    <img class="copa" src="/public/imagenes/copalib.svg" alt="foto de la competencia">
+    <img class="copa" src={withBase("imagenes/copalib.svg")} alt="foto de la competencia">
     <h3>El maximo certamen internacional de america de futbol</h3>
     <hr>
     <!-- aca va la historia de la copa y clubes mendocinos xdxd  -->
     <h1 class='txtcopas'>Apariciones Mendocinas destacadas</h1>
-    <img class='fotologro' src='/public/imagenes/gclib.WEBP' alt='equipo en libertadores'>
+    <img class='fotologro' src={withBase('imagenes/gclib.webp')} alt='equipo en libertadores'>
     <h3 class='txtcopas'>Godoy cruz</h3>
     <h3 class='txtcopas'>consiguio llegar a octavos de final perdiendo contra palmeiras Global:2-6</h3>
     <hr>

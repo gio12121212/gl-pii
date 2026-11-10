@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../../utils/paths';
 import equipos from '../../data/equipos.json';
 
 export function getStaticPaths() {
@@ -15,48 +16,48 @@ const { equipo } = Astro.props;
         <meta charset="utf-8" />
         <title>{equipo.nombre} - Historia</title>
         <meta name="description" content={`Historia de ${equipo.nombre}`} />
-        <link rel="stylesheet" href="/stylesheet.css" type="text/css">
+        <link rel="stylesheet" href={withBase("stylesheet.css")} type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <!--CUERPO DE PÁGINA-->
-        <div id="fondo-hinchada" style={`background-image: url('${equipo.hinchadaFondo}'); background-size: cover;`}>
+        <div id="fondo-hinchada" style={`background-image: url('${withBase(equipo.hinchadaFondo)}'); background-size: cover;`}>
             <div id="datos-equipo">
-                <img id="escudo" src={equipo.escudo} alt={`Escudo de ${equipo.nombre}`} width="200px">
+                <img id="escudo" src={withBase(equipo.escudo)} alt={`Escudo de ${equipo.nombre}`} width="200px">
                 <h1>{equipo.nombre}</h1>
                 <h3>Fundado el {equipo.fundacion}</h3>
                 <h3>Actualmente disputa la {equipo.division}</h3>
                 <div id="clasico">
                     <p>Es clásico de {equipo.clasico}</p>
-                    <img src={equipo.escudoClasico} alt={`Escudo de ${equipo.nombre}`} width="30px">
+                    <img src={withBase(equipo.escudoClasico)} alt={`Escudo de ${equipo.nombre}`} width="30px">
                 </div>
             </div>
         </div>
-        <a href="/equipos/"><h2>← Volver a equipos</h2></a>
+        <a href={withBase("equipos/")}><h2>← Volver a equipos</h2></a>
         <h1>Historia del club</h1>
         <section class="lineaDeTiempo">
             <div class="evento">
                 <div class="contenido">
-                    <img src={equipo.card1Img} alt={`Imagen de ${equipo.nombre}`} width="550px">
+                    <img src={withBase(equipo.card1Img)} alt={`Imagen de ${equipo.nombre}`} width="550px">
                     <div class="texto" set:html={equipo.card1}></div>
                 </div>
-                <div class="punto"><img src="/imagenes/punto.svg" alt="punto"></div>
+                <div class="punto"><img src={withBase("imagenes/punto.svg")} alt="punto"></div>
                 <div class="fecha">{equipo.card1fecha}</div>
                 </div>
                 <div class="evento">
                     <div class="contenido">
-                        <img src={equipo.card2Img} alt={`Imagen de ${equipo.nombre}`} width="550px">
+                        <img src={withBase(equipo.card2Img)} alt={`Imagen de ${equipo.nombre}`} width="550px">
                         <div class="texto" set:html={equipo.card2}></div>
                     </div>
-                    <div class="punto"><img src="/imagenes/punto.svg" alt="punto"></div>
+                    <div class="punto"><img src={withBase("imagenes/punto.svg")} alt="punto"></div>
                     <div class="fecha">{equipo.card2fecha}</div>
                 </div>
                 <div class="evento">
                     <div class="contenido">
-                        <img src={equipo.card3Img} alt={`Imagen de ${equipo.nombre}`} width="550px">
+                        <img src={withBase(equipo.card3Img)} alt={`Imagen de ${equipo.nombre}`} width="550px">
                         <div class="texto" set:html={equipo.card3}></div>
                     </div>
-                    <div class="punto"><img src="/imagenes/punto.svg" alt="punto"></div>
+                    <div class="punto"><img src={withBase("imagenes/punto.svg")} alt="punto"></div>
                     <div class="fecha">{equipo.card3fecha}</div>
                 </div>
         </section>

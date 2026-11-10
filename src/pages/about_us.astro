@@ -1,21 +1,24 @@
+---
+import { withBase } from '../utils/paths';
+---
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Sobre Nosotros - Afume</title>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link rel="stylesheet" href={withBase("stylesheet.css")} type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!--NAV-->
     <nav>
         <ul>
-            <li><a href="/"><img src="/imagenes/afume logo.svg" alt="logo de afume" width="200px"></a></li>
-            <li><a class="links" href="/news">NOTICIAS</a></li>
-            <li><a class="links" href="/next_matches">PRÓXIMOS PARTIDOS</a></li>
-            <li><a class="links" href="/equipos/">EQUIPOS</a></li>
-            <li><a class="links" href="/competencies">COMPETENCIAS</a></li>
-            <li><a class="links" href="/about_us">SOBRE NOSOTROS</a></li>
+            <li><a href={withBase("")}><img src={withBase("imagenes/afume logo.svg")} alt="logo de afume" width="200px"></a></li>
+            <li><a class="links" href={withBase("news/")}>NOTICIAS</a></li>
+            <li><a class="links" href={withBase("next_matches/")}>PRÓXIMOS PARTIDOS</a></li>
+            <li><a class="links" href={withBase("equipos/")}>EQUIPOS</a></li>
+            <li><a class="links" href={withBase("competencies/")}>COMPETENCIAS</a></li>
+            <li><a class="links" href={withBase("about_us/")}>SOBRE NOSOTROS</a></li>
         </ul>
     </nav>
     
@@ -23,11 +26,11 @@
     <h1>NOSOTROS SOMOS</h1>
     <div id="info_personal">
         <p>Giovanni Agüero</p>
-        <a href="https://www.instagram.com/giooagg_/" target="_blank"><img src="imagenes/ig.png" alt="instagram giovanni" width="60px"></a>
-        <a href="https://www.linkedin.com/in/giovanni-ag%C3%BCero-872bb2426/" target="_blank"><img src="imagenes/linkedin.png" alt="linkedin giovanni" width="60px"></a>
+        <a href="https://www.instagram.com/giooagg_/" target="_blank"><img src={withBase("imagenes/ig.png")} alt="instagram giovanni" width="60px"></a>
+        <a href="https://www.linkedin.com/in/giovanni-ag%C3%BCero-872bb2426/" target="_blank"><img src={withBase("imagenes/linkedin.png")} alt="linkedin giovanni" width="60px"></a>
         <p>Ciro Salinas</p>
-        <a href="https://www.instagram.com/cirosln" target="_blank"><img src="imagenes/ig.png" alt="instagram ciro" width="60px"></a>
-        <a href="https://www.linkedin.com/in/ciro-salinas-177a35425/" target="_blank"><img src="imagenes/linkedin.png" alt="linkedin ciro" width="60px"></a>
+        <a href="https://www.instagram.com/cirosln" target="_blank"><img src={withBase("imagenes/ig.png")} alt="instagram ciro" width="60px"></a>
+        <a href="https://www.linkedin.com/in/ciro-salinas-177a35425/" target="_blank"><img src={withBase("imagenes/linkedin.png")} alt="linkedin ciro" width="60px"></a>
     </div>
     <div id="propósito">
         <h2>PROPÓSITO DEL SITIO WEB</h2>
@@ -39,21 +42,21 @@
     <!--FOOTER-->
     <footer>
         <div id="redes">
-            <a href="https://x.com/soytarufa" target="_blank"><img src="imagenes/x.svg" alt="twitter afume"></a>
-            <a href="https://instagram.com/afumendoza" target="_blank"><img src="imagenes/ig.svg" alt="instagram afume"></a>
+            <a href="https://x.com/soytarufa" target="_blank"><img src={withBase("imagenes/x.svg")} alt="twitter afume"></a>
+            <a href="https://instagram.com/afumendoza" target="_blank"><img src={withBase("imagenes/ig.svg")} alt="instagram afume"></a>
         </div>
         <h1>CONTACTO</h1>
         <h3>Asociación Fútbol de Mendoza (AFUME)</h3>
         <div id="info_empresa">
-            <img src="imagenes/ubicacion.svg" alt="ubicación afume">
+            <img src={withBase("imagenes/ubicacion.svg")} alt="ubicación afume">
             <p>Pedro Molina y Perú - Ciudad de Mendoza.</p>
-            <img src="imagenes/correo.svg" alt="correo afume">
+            <img src={withBase("imagenes/correo.svg")} alt="correo afume">
             <p>support.afume@gmail.com</p>
-            <img src="imagenes/teléfono.svg" alt="teléfono afume">
+            <img src={withBase("imagenes/teléfono.svg")} alt="teléfono afume">
             <p>+54 9 261 623-4614</p>
         </div>
         <div>
-            <img src="imagenes/afume logo.svg" alt="afume logo" width="400px">
+            <img src={withBase("imagenes/afume logo.svg")} alt="afume logo" width="400px">
         </div>
         <p>Copyright © 2026 AFUME | Todos los derechos reservados.</p>
     </footer>
