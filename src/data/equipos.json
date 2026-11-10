@@ -30,7 +30,15 @@
         "hinchadaFondo": "/imagenes/hinchada godoy cruz.webp",
         "clasico": "Andes Talleres",
         "escudoClasico": "/imagenes/andes talleres.svg",
-        "historia": "<p>muerto en la B</p>"
+        "card1": "<h3>Fundación del Club</h3><p><b>Godoy Cruz nació como institución en el año 1921</b></p><p>Todo comenzó cuando un grupo de amigos, reunidos en el Bar Victoria (ubicado enfrente de la plaza departamental en ese entonces), decidieron fundar un club, aprovechando el auge que había en la época. Fue así como nació, el <b>1 de junio de 1921</b>, <b>el Club Sportivo Godoy Cruz</b> con la presidencia novicia de <b>Don Romero Garay</b>.</p>",
+        "card1Img": "/imagenes/card 1 godoy cruz.webp",
+        "card1fecha": "1 de junio de 1921",
+        "card2":"<h3>La fusión con el Club Bodega Antonio Tomba</h3><p><b>Durante el año 1930 se concretó la fusión entre el Club Sportivo Godoy Cruz y el Club de la Bodega Antonio Tomba.</b></p><p>Esta alianza fue producto de la necesidad de unificar el esfuerzo de dos instituciones arraigadas en el departamento, que se unieron para formar un club más poderoso y con mayor proyección: el <b>Club Deportivo Godoy Cruz Antonio Tomba</b>.</p>",
+        "card2Img": "/imagenes/card 2 godoy cruz.webp",
+        "card2fecha": "1930",
+        "card3": "<h3>El primer campeonato de Liga</h3><p><b>Godoy Cruz es proclamado campeón por primera vez en su historia, al empatar en condición de local 1 a 1 ante el Club Nacional Vélez Sarsfield Pacífico.</b></p><p>El gol bodeguero lo marcó <b>Domingo Godoy</b>.</p>",
+        "card3Img": "/imagenes/card 3 godoy cruz.webp",
+        "card3fecha": "8 de octubre de 1944"
     },
     {
         "id": "maipú",

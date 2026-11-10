@@ -25,6 +25,7 @@ h2 {
 
 p {
     color: #163c2d;
+    font: 17px Montserrat;
 }
 
 /*NAVBAR*/
@@ -424,6 +425,86 @@ footer p {
 
 #clasico img {
     margin-left: 10px;
+}
+
+.lineaDeTiempo {
+    position: relative;
+    width: 1250px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.lineaDeTiempo::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: #207744;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.evento {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.punto {
+    justify-self: center;
+    z-index: 1;
+}
+
+.contenido {
+    grid-column: 1; grid-row: 1;
+}
+
+.punto {
+    grid-column: 2; grid-row: 1;
+}
+
+.fecha {
+    grid-column: 3; grid-row: 1; text-align: left;
+}
+
+.evento:nth-child(even) .contenido {
+    grid-column: 3;
+}
+
+.evento:nth-child(even) .fecha {
+    grid-column: 1; text-align: right;
+}
+
+.contenido {
+    max-width: 550px;
+    background-color: #bbd6c8;
+    margin-left: 5%;
+    border-radius: 40px;
+    box-shadow: 2px 2px 20px 1px #042b17b6;
+}
+
+.contenido img {
+    width: 100%;
+    display: block;
+    border-radius: 40px 40px 0 0;
+}
+
+.texto {
+    text-align: left;
+    margin-left: 7%;
+    margin-right: 7%;
+    font-size: 28px;
+    padding: 16px;
+}
+
+.fecha {
+    padding: 10px 20px;
+    font: bold 30px Montserrat;
+    color: #163c2d;
 }
 
 /*ABOUT US*/
