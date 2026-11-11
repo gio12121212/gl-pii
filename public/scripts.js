@@ -1,4 +1,5 @@
 const track = document.getElementById('sliderTrack');
+const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
 const btnPrev = document.getElementById('btnPrev');
 const btnNext = document.getElementById('btnNext');
@@ -6,25 +7,26 @@ const btnNext = document.getElementById('btnNext');
 let currentIndex = 0;
 const totalSlides = slides.length;
 
+function getVisible() {
+  return parseInt(getComputedStyle(slider).getPropertyValue('--visible')) || 3;
+}
+
+function getMaxIndex() {
+  return Math.max(0, totalSlides - getVisible());
+}
+
 function updateSlider() {
-  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  if (currentIndex > getMaxIndex()) currentIndex = getMaxIndex();
+  track.style.transform = `translateX(-${currentIndex * (100 / getVisible())}%)`;
 }
 
 btnNext.addEventListener('click', () => {
-  if (currentIndex < totalSlides - 1) {
-    currentIndex++;
-  } else {
-    currentIndex = 0;
-  }
+  currentIndex = currentIndex < getMaxIndex() ? currentIndex + 1 : 0;
   updateSlider();
 });
 
 btnPrev.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-  } else {
-    currentIndex = totalSlides - 1;
-  }
+  currentIndex = currentIndex > 0 ? currentIndex - 1 : getMaxIndex();
   updateSlider();
 });
 

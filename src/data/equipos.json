@@ -30,6 +30,8 @@
         "hinchadaFondo": "/imagenes/hinchada godoy cruz.webp",
         "clasico": "Andes Talleres",
         "escudoClasico": "/imagenes/andes talleres.svg",
+        "color": "2220ac",
+        
         "card1": "<h3>Fundación del Club</h3><p><b>Godoy Cruz nació como institución en el año 1921</b></p><p>Todo comenzó cuando un grupo de amigos, reunidos en el Bar Victoria (ubicado enfrente de la plaza departamental en ese entonces), decidieron fundar un club, aprovechando el auge que había en la época. Fue así como nació, el <b>1 de junio de 1921</b>, <b>el Club Sportivo Godoy Cruz</b> con la presidencia novicia de <b>Don Romero Garay</b>.</p>",
         "card1Img": "/imagenes/card 1 godoy cruz.webp",
         "card1fecha": "1 de junio de 1921",
@@ -38,7 +40,14 @@
         "card2fecha": "1930",
         "card3": "<h3>El primer campeonato de Liga</h3><p><b>Godoy Cruz es proclamado campeón por primera vez en su historia, al empatar en condición de local 1 a 1 ante el Club Nacional Vélez Sarsfield Pacífico.</b></p><p>El gol bodeguero lo marcó <b>Domingo Godoy</b>.</p>",
         "card3Img": "/imagenes/card 3 godoy cruz.webp",
-        "card3fecha": "8 de octubre de 1944"
+        "card3fecha": "8 de octubre de 1944",
+        
+        "titulo1": "<h3>Liga mendocina</h3><p>1944, 1947, 1950, 1951, 1954, 1968, 1989, 1990, 2012.</p>",
+        "titulo1Img": "/imagenes/godoy cruz campeon liga mendocina.jpeg",
+        "titulo2": "<h3>Torneo del interior</h3><p>1993/1994</p>",
+        "titulo2Img": "/imagenes/godoy cruz campeon interior.jpg",
+        "titulo3": "<h3>Nacional B</h3><p>2005/2006</p>",
+        "titulo3Img": "/imagenes/godoy cruz campeon b.webp"
     },
     {
         "id": "maipú",

@@ -3,9 +3,6 @@ mira la linea 456
 
 */
 
-
-
-
 /*TODA LA PÁGINA*/
 body {
     margin: 0;
@@ -102,6 +99,25 @@ h3 {
 footer p {
     font: 500 18px Segoe UI;
     color: #042b17;
+}
+
+/*ABOUT US*/
+#info_personal {
+    display: inline-grid;
+    grid-template-columns: auto 1fr 1fr;
+    gap: 0 20px;
+    align-items: center;
+}
+
+#info_personal p {
+    text-align: start;
+    margin-right: 50px;
+    font: 500 25px Montserrat;
+}
+
+#propósito {
+    font: 25px Montserrat;
+    margin: 0 30px 10px;
 }
 
 /*HOME*/
@@ -393,7 +409,6 @@ footer p {
 
 /*SPECIFIC TEAM*/
 #datos-equipo {
-    background-color: #58a778;
     width: 800px;
     margin: 0 auto;
     border-radius: 50px;
@@ -427,6 +442,11 @@ footer p {
 
 #clasico img {
     margin-left: 10px;
+}
+
+.equipoSeccion {
+    text-align: start;
+    margin-left: 70px;
 }
 
 .lineaDeTiempo {
@@ -500,7 +520,7 @@ footer p {
     border-radius: 40px 40px 0 0;
 }
 
-.texto {
+.evento .texto {
     text-align: left;
     margin-left: 7%;
     margin-right: 7%;
@@ -514,31 +534,57 @@ footer p {
     color: #163c2d;
 }
 
-/*ABOUT US*/
-#info_personal {
-    display: inline-grid;
-    grid-template-columns: auto 1fr 1fr;
-    gap: 0 20px;
-    align-items: center;
+#scroll{
+    display: flex;
+    width: 1200px;
+    height: 350px;
+    overflow: auto;
+    padding: 20px;
+    margin: 0 auto;
+    gap: 70px;
 }
 
-#info_personal p {
+#scroll::-webkit-scrollbar {
+    height: 10px;
+}
+
+#scroll::-webkit-scrollbar-button {
+    display: none;
+}
+
+#scroll::-webkit-scrollbar-track {
+    background: #40af7285;
+    border-radius: 10px;
+}
+
+#scroll::-webkit-scrollbar-thumb {
+    background: #163c2d;
+    border-radius: 10px;
+}
+
+#scroll::-webkit-scrollbar-thumb:hover {
+    background: #1f5440;
+}
+
+.titulos img{
+    border-radius: 10px;
+    width: 350px;
+    height: 220px;
+    object-fit: cover;
+    box-shadow: 2px 2px 20px 1px #042b17b6;
+}
+
+.titulos h3, .titulos p{
     text-align: start;
-    margin-right: 50px;
-    font: 500 25px Montserrat;
-}
-
-#propósito {
-    font: 25px Montserrat;
-    margin: 0 30px 10px;
 }
 
 /* slider copas */
 
 .slider {
+    --visible:3;
     position: relative;
     width: calc(100% - 32px);
-    max-width: 720px;
+    max-width: 960px;
     margin: 0 auto 48px;
     overflow: hidden;
     border-radius: 12px;
@@ -552,11 +598,12 @@ footer p {
 }
 
 .slide {
-    min-width: 100%;
+    flex: 0 0 calc(100% / var(--visible));
+    min-width: 0;
     box-sizing: border-box;
     height: 340px;
-    padding: 24px 64px;
-    display: flex;
+    padding: 24px 20px;
+    display: flex;  
     align-items: center;
     justify-content: center;
 }
@@ -565,7 +612,7 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 280px;
+    width: 100%;
     max-width: 100%;
     min-width: 0;
     height: 100%;
@@ -573,7 +620,7 @@ footer p {
 
 .slide img {
     width: 100%;
-    max-width: 280px;
+    max-width: 100%;
     height: 100%;
     display: block;
     object-fit: contain;
@@ -620,21 +667,9 @@ footer p {
     outline-offset: 3px;
 }
 
-@media (max-width: 480px) {
-    .slide {
-        height: 260px;
-        padding: 20px 56px;
-    }
-
-    .btn-prev {
-        left: 8px;
-    }
-
-    .btn-next {
-        right: 8px;
-    }
+@media (max-width: 900px) {
+    .slider { --visible: 2; }
 }
-
 
 /* aca empieza el css de las competencias */
 .copa {

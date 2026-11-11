@@ -20,9 +20,21 @@ const { equipo } = Astro.props;
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!--CUERPO DE PÁGINA-->
-        <div id="fondo-hinchada" style={`background-image: url('${withBase(equipo.hinchadaFondo)}'); background-size: cover;`}>
-            <div id="datos-equipo">
+        <!--NAV-->
+        <div id="fondo-hinchada" style={`background-image: url('${withBase(equipo.hinchadaFondo)}'); background-size: cover; padding: 1px;`}>
+            <nav>
+                <ul>
+                    <li><a href={withBase("")}><img src={withBase("imagenes/afume logo.svg")} alt="logo de afume" width="200px"></a></li>
+                    <li><a class="links" href={withBase("news/")}>NOTICIAS</a></li>
+                    <li><a class="links" href={withBase("next_matches/")}>PRÓXIMOS PARTIDOS</a></li>
+                    <li><a class="links" href={withBase("equipos/")}>EQUIPOS</a></li>
+                    <li><a class="links" href={withBase("competencies/")}>COMPETENCIAS</a></li>
+                    <li><a class="links" href={withBase("about_us/")}>SOBRE NOSOTROS</a></li>
+                </ul>
+            </nav>
+
+            <!--CUERPO DE PÁGINA-->
+            <div id="datos-equipo" style={`background-color: #${equipo.color};`}>
                 <img id="escudo" src={withBase(equipo.escudo)} alt={`Escudo de ${equipo.nombre}`} width="200px">
                 <h1>{equipo.nombre}</h1>
                 <h3>Fundado el {equipo.fundacion}</h3>
@@ -34,7 +46,7 @@ const { equipo } = Astro.props;
             </div>
         </div>
         <a href={withBase("equipos/")}><h2>← Volver a equipos</h2></a>
-        <h1>Historia del club</h1>
+        <h1 class="equipoSeccion">Historia del club</h1>
         <section class="lineaDeTiempo">
             <div class="evento">
                 <div class="contenido">
@@ -61,5 +73,54 @@ const { equipo } = Astro.props;
                     <div class="fecha">{equipo.card3fecha}</div>
                 </div>
         </section>
+        <h1 class="equipoSeccion">Títulos</h1>
+        <div id="scroll">
+            <div class="titulos">
+                <img src={withBase(equipo.titulo1Img)} alt={`1° hito de ${equipo.nombre}`}>
+                <div class="texto" set:html={equipo.titulo1}></div>
+            </div>
+            <div class="titulos">
+                <img src={withBase(equipo.titulo2Img)} alt={`2° hito de ${equipo.nombre}`}>
+                <div class="texto" set:html={equipo.titulo2}></div>
+            </div>
+            <div class="titulos">
+                <img src={withBase(equipo.titulo3Img)} alt={`3° hito de ${equipo.nombre}`}>
+                <div class="texto" set:html={equipo.titulo3}></div>
+            </div>
+            <div class="titulos">
+                <img src={withBase(equipo.titulo1Img)} alt={`1° hito de ${equipo.nombre}`}>
+                <div class="texto" set:html={equipo.titulo1}></div>
+            </div>
+            <div class="titulos">
+                <img src={withBase(equipo.titulo2Img)} alt={`2° hito de ${equipo.nombre}`}>
+                <div class="texto" set:html={equipo.titulo2}></div>
+            </div>
+            <div class="titulos">
+                <img src={withBase(equipo.titulo3Img)} alt={`3° hito de ${equipo.nombre}`}>
+                <div class="texto" set:html={equipo.titulo3}></div>
+            </div>
+        </div>
+        <h1 class="equipoSeccion">Actualidad del equipo</h1>
+        <!--FOOTER-->
+        <footer>
+            <div id="redes">
+                <a href="https://x.com/soytarufa" target="_blank"><img src={withBase("imagenes/x.svg")} alt="twitter afume"></a>
+                <a href="https://instagram.com/afumendoza" target="_blank"><img src={withBase("imagenes/ig.svg")} alt="instagram afume"></a>
+            </div>
+            <h1>CONTACTO</h1>
+            <h3>Asociación Fútbol de Mendoza (AFUME)</h3>
+            <div id="info_empresa">
+                <img src={withBase("imagenes/ubicacion.svg")} alt="ubicación afume">
+                <p>Pedro Molina y Perú - Ciudad de Mendoza.</p>
+                <img src={withBase("imagenes/correo.svg")} alt="correo afume">
+                <p>support.afume@gmail.com</p>
+                <img src={withBase("imagenes/teléfono.svg")} alt="teléfono afume">
+                <p>+54 9 261 623-4614</p>
+            </div>
+            <div>
+                <img src={withBase("imagenes/afume logo.svg")} alt="afume logo" width="400px">
+            </div>
+            <p>Copyright © 2026 AFUME | Todos los derechos reservados.</p>
+        </footer>
     </body>
 </html>
